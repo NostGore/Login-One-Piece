@@ -1,0 +1,97 @@
+ <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Piece Login</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Pirata+One&family=Cinzel+Decorative:wght@700&family=Rajdhani:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="bg"></div>
+    <div class="bg-overlay"></div>
+    <div class="vignette"></div>
+    <div class="grain"></div>
+    <canvas id="rain"></canvas>
+
+    <div class="stage">
+        <div class="card-wrapper">
+            <div class="card">
+
+                <div class="emblem">
+                    <img src="logo.png" alt="Logo"
+                        style="width:120px;height:120px;object-fit:contain;filter:drop-shadow(0 0 5px var(--red-glow));animation:pulse 3s ease-in-out infinite;">
+                </div>
+
+                <h1 class="title">LOGIN</h1>
+                <p class="subtitle">One Piece</p>
+
+                <div class="tabs">
+                    <button class="tab-btn active" onclick="switchTab('login')">Login</button>
+                    <button class="tab-btn" onclick="switchTab('register')">Registro</button>
+                    <div class="tab-indicator" id="tabLine"></div>
+                </div>
+
+                <div class="forms-container">
+
+                    <!-- LOGIN -->
+                    <div class="form-panel active" id="panel-login">
+                        <div class="field">
+                            <label>Usuario / Email</label>
+                            <span class="field-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="text" placeholder="Email">
+                        </div>
+                        <div class="field">
+                            <label>Contraseña</label>
+                            <span class="field-icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="remember">
+                            <label for="remember">Recordarme</label>
+                        </div>
+                        <button class="btn-main" onclick="rippleClick(event)">Ingresar</button>
+                        <div class="extra">
+                            <a href="#">¿Olvidaste tu contraseña?</a>
+                        </div>
+                    </div>
+
+                    <!-- REGISTER -->
+                    <div class="form-panel right" id="panel-register">
+                        <div class="field">
+                            <label>Nombre de Usuario</label>
+                            <span class="field-icon"><i class="fa-solid fa-user"></i></span>
+                            <input type="text" placeholder="Monkey D. Luffy">
+                        </div>
+                        <div class="field">
+                            <label>Email</label>
+                            <span class="field-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div class="field">
+                            <label>Contraseña</label>
+                            <span class="field-icon"><i class="fas fa-lock"></i></span>
+                            <input type="password" placeholder="••••••••">
+                        </div>
+                        <div class="check-row">
+                            <input type="checkbox" id="terms">
+                            <label for="terms">Acepto los terminos y condiciones</label>
+                        </div>
+                        <button class="btn-main" onclick="rippleClick(event)">Registrarse</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
